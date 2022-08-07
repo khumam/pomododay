@@ -38,9 +38,9 @@ function showTask() {
   $('#listtask').empty();
   const tasks = loadTask();
   for (let index = tasks.length - 1; index >= 0; index--) {
-    let task = `<div class="row align-items-start">
+    let task = `<div class="row align-items-center mb-3">
       <div class="col-md-11">
-        <div class="card task mb-3 ${tasks[index].isDone ? 'bg-secondary' : ''}" data-id="${tasks[index].id}">
+        <div class="card task ${tasks[index].isDone ? 'bg-secondary' : ''}" data-id="${tasks[index].id}">
           <div class="p-2">
             <span>${tasks[index].val}</span>
           </div>

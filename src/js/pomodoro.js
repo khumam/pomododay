@@ -24,7 +24,7 @@ function setup() {
 
 function draw() {
   clear()
-  background("#D9622B");
+  background("#B40A33");
   if (start) {
     if (step[currentStep] == 'stop') {
       step = [pomodoroTime, pomodoroShortRest, pomodoroTime, pomodoroShortRest, pomodoroTime, pomodoroShortRest, pomodoroTime, pomodoroLongRest, finish]

@@ -9,6 +9,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/src/css/bootstrap.min.css">
   <link rel="stylesheet" href="/src/css/pomododay.css">
+  <link rel="icon" type="image/png" href="/src/images/favicon.png" />
+
+  <meta name="description"
+    content="Pomododay is a web application that have feature to set the pomodoro technique with to do list">
+  
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://pomododay.vercel.app">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pomododay">
+  <meta property="og:description"
+    content="Pomododay is a web application that have feature to set the pomodoro technique with to do list">
+  <meta property="og:image" content="https://pomododay.vercel.app/src/images/ogimage.jpeg">
+  
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="pomododay.vercel.app">
+  <meta property="twitter:url" content="https://pomododay.vercel.app">
+  <meta name="twitter:title" content="Pomododay">
+  <meta name="twitter:description"
+    content="Pomododay is a web application that have feature to set the pomodoro technique with to do list">
+  <meta name="twitter:image" content="https://pomododay.vercel.app/src/images/ogimage.jpeg">
 
   <title>Pomododay</title>
 </head>
@@ -16,13 +37,13 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-navbar">
     <div class="container">
-      <a class="navbar-title" href="">Pomododay</a>
+      <a class="navbar-title" href="/">Pomododay</a>
     </div>
   </nav>
   <section class="d-flex align-items-center pt-5 mb-5">
     <div class="container">
       <div class="row mb-3">
-        <div class="col-12 text-center">
+        <div class="col-12">
           <h1 class="quote">Have a great day and I hope you like it<span>Khoerul Umam</span></h1>
           </p>
         </div>
@@ -42,16 +63,11 @@
           </div>
         </div>
         <div class="col-md-8">
-          <div class="card">
-            <div class="card-header">
-              <h4 class="subheading mb-0">Your task today</h4>
-            </div>
-            <div class="card-body">
-              <div id="listtask"></div>
-              <div class="form-group">
-                <input type="text" class="form-control form-custom" id="inputtask" placeholder="Today I will">
-              </div>
-            </div>
+          <h4 class="subheading">Your task today</h4>
+          <hr>
+          <div class="mt-3" id="listtask"></div>
+          <div class="form-group">
+            <input type="text" class="form-control form-custom" id="inputtask" placeholder="Today I will">
           </div>
         </div>
       </div>
