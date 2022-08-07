@@ -36,7 +36,7 @@ body {
 
 .quote {
   font-weight: 600;
-  font-size: 48px;
+  font-size: 36px;
   color: #18181b;
 }
 
@@ -135,6 +135,12 @@ canvas {
       font-weight: 600;
       font-size: 84px;
       color: #18181b;
+  }
+
+  .quote {
+    font-weight: 600;
+    font-size: 48px;
+    color: #18181b;
   }
 
   .mb-mobile-3 {
