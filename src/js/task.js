@@ -8,6 +8,11 @@ $(document).on('click', '.task', function () {
   updateStatus(taskId)
 })
 
+$(document).on('click', '.deletetask', function () {
+  const taskId = $(this).data('id');
+  deleteTask(taskId)
+})
+
 $("#inputtask").keypress(function (e) {
   if (e.which == 13) {
     let tasks = loadTask();
@@ -33,7 +38,18 @@ function showTask() {
   $('#listtask').empty();
   const tasks = loadTask();
   for (let index = tasks.length - 1; index >= 0; index--) {
-    let task = `<div class="task mb-3 ${tasks[index].isDone ? 'done' : ''}" data-id="${tasks[index].id}"><span>- ${tasks[index].val}</span></div>`;
+    let task = `<div class="row align-items-start">
+      <div class="col-md-11">
+        <div class="card task mb-3 ${tasks[index].isDone ? 'bg-secondary' : ''}" data-id="${tasks[index].id}">
+          <div class="p-2">
+            <span>${tasks[index].val}</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1 py-2">
+        <button class="btn btn-danger btn-sm btn-block h-100 deletetask" data-id="${tasks[index].id}">X</button>
+      </div>
+    </div>`;
     $('#listtask').append(task);
   }
 }
@@ -41,8 +57,6 @@ function showTask() {
 function updateStatus(id) {
   const tasks = loadTask();
   tasks.map(function (value) {
-    console.log(value.id)
-    console.log(id)
     if (value.id == id) {
       value.isDone = !value.isDone;
       console.log(value.isDone)
@@ -51,6 +65,18 @@ function updateStatus(id) {
     return value;
   });
   saveTask(tasks);
+  showTask();
+}
+
+function deleteTask(id) {
+  let tasks = loadTask();
+  let currentTasks = []
+  tasks.map(function (value) {
+    if (value.id != id) {
+      currentTasks.push(value);
+    }
+  });
+  saveTask(currentTasks);
   showTask();
 }
 

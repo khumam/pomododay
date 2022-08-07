@@ -98,7 +98,7 @@ canvas {
 }
 
 .task.done {
-  text-decoration: line-through;
+  background-color: #6f6f6f;
 }
 
 #pomo {
