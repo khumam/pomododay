@@ -37,9 +37,9 @@ function draw() {
     text(`${step[currentStep] < 10 ? '0' + step[currentStep] : step[currentStep]}:${counter < 10 ? '0' + counter : counter}`, width / 2, height / 2);
     textSize(16);
     if (currentStep % 2 != 0) {
-      text(`Current step : ${currentStep + 1} (rest)`, width / 2, 180);
+      text(`Current pomodoro : ${currentStep + 1} (rest)`, width / 2, 250);
     } else {
-      text(`Current step : ${currentStep + 1} (work)`, width / 2, 180);
+      text(`Current pomodoro : ${currentStep + 1} (work)`, width / 2, 250);
     }
 
     if (step[currentStep] == 0 && counter == 0) {
