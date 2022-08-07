@@ -1,6 +1,6 @@
-const pomodoroTime = 25;
+const pomodoroTime = 24;
 const pomodoroShortRest = 5;
-const pomodoroLongRest = 25;
+const pomodoroLongRest = 24;
 const finish = 'stop';
 let step = [pomodoroTime, pomodoroShortRest, pomodoroTime, pomodoroShortRest, pomodoroTime, pomodoroShortRest, pomodoroTime, pomodoroLongRest, finish]
 let currentStep = 0
